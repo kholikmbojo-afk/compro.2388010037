@@ -1,8 +1,3 @@
-script: |
-            sudo docker stop compro_nim || true
-            sudo docker rm -f compro_nim || true
-            sudo docker pull ${{ secrets.DOCKERHUB_USERNAME }}/compro_2388010037:latest
-            sudo docker run -d --name compro_nim -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/compro_2388010037:latest
 name: Deploy Next.js to AWS EC2
 
 on:
@@ -38,15 +33,8 @@ jobs:
           key: ${{ secrets.AWS_PRIVATE_KEY }}
           port: 22
           script: |
-            # Hentikan dan hapus container lama jika ada
-            docker stop compro_nim || true
-            docker rm -f compro_nim || true
-            
-            # Hapus image lama agar menarik yang paling baru
+            docker stop compro_app || true
+            docker rm compro_app || true
             docker rmi -f ${{ secrets.DOCKERHUB_USERNAME }}/compro_2388010037:latest || true
-            
-            # Ambil image terbaru dari Docker Hub
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/compro_2388010037:latest
-            
-            # Jalankan container: mapping port 80 EC2 ke port 3000 Next.js
-            docker run -d --name compro_nim -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/compro_2388010037:latest
+            docker run -d --name compro_app -p 80:80 --restart always ${{ secrets.DOCKERHUB_USERNAME }}/compro_2388010037:latest
