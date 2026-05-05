@@ -1,4 +1,4 @@
-name: Deploy web statistic2 to AWS EC2
+name: Deploy web statistic3 to AWS EC2
 on:
   push:
     branches: [ main ]
