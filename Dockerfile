@@ -1,3 +1,21 @@
-FROM nginx:alpine
-COPY index.nginx-debian.html /usr/share/nginx/html/index.html
-EXPOSE 80
+# Tahap 1: Build
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Tahap 2: Run
+FROM node:18-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV production
+
+# Salin file hasil build
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+
+EXPOSE 3000
+CMD ["npm", "start"]
