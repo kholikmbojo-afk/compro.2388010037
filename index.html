@@ -1,34 +1,122 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Kholik</title>
-  <style>
-    body {
-      margin:0;
-      font-family:Arial;
-      background:#0f172a;
-      color:white;
-      text-align:center;
-    }
-    .card {
-      margin-top:100px;
-    }
-    img {
-      width:200px;
-      border-radius:20px;
-      border:3px solid #38bdf8;
-    }
-    h1 { color:#38bdf8; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Kholik</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:40px;
+  text-align:center;
+}
+
+.card{
+  background:#1e293b;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+img{
+  width:180px;
+  border-radius:20px;
+  border:3px solid #38bdf8;
+}
+
+h1{color:#38bdf8;}
+
+.section{
+  margin-top:30px;
+  background:#1e293b;
+  padding:20px;
+  border-radius:15px;
+  text-align:left;
+}
+
+.badge{
+  display:inline-block;
+  background:#38bdf8;
+  color:black;
+  padding:5px 10px;
+  border-radius:8px;
+  margin:5px;
+  font-size:12px;
+}
+
+.news{
+  margin-top:10px;
+  padding:10px;
+  border-left:3px solid #38bdf8;
+}
+</style>
 </head>
+
 <body>
 
+<div class="container">
+
+<!-- PROFILE -->
 <div class="card">
   <img src="profile.jpeg" alt="foto">
   <h1>Kholik</h1>
-  <p>AWS Cloud Engineer</p>
+  <p>AWS Cloud Engineer | Linux Enthusiast</p>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <h2>About Me</h2>
+  <p>
+    Saya adalah mahasiswa Teknik Informatika yang fokus pada cloud computing,
+    server Linux, dan deployment aplikasi menggunakan AWS EC2 serta Nginx.
+    Saya juga belajar DevOps dan automation CI/CD.
+  </p>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+  <h2>Skills</h2>
+  <span class="badge">AWS EC2</span>
+  <span class="badge">Nginx</span>
+  <span class="badge">Linux</span>
+  <span class="badge">GitHub</span>
+  <span class="badge">Docker Basic</span>
+  <span class="badge">CI/CD</span>
+</div>
+
+<!-- NEWS / PROJECT -->
+<div class="section">
+  <h2>News / Project</h2>
+
+  <div class="news">
+    🚀 Deploy pertama portfolio di AWS EC2 menggunakan Nginx
+  </div>
+
+  <div class="news">
+    🛠 Belajar setup CI/CD GitHub Actions ke Docker Hub
+  </div>
+
+  <div class="news">
+    📡 Konfigurasi server Linux untuk hosting website statis
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+  <h2>Contact</h2>
+  <p>Email: kholik@example.com</p>
+  <p>WhatsApp: 08xxxxxxxxxx</p>
+</div>
+
 </div>
 
 </body>
