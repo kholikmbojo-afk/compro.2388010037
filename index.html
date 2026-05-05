@@ -1,123 +1,116 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Kholik</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Tech</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#0f172a;
-  color:white;
-}
+    body {
+      background: linear-gradient(135deg, #0a0f2c, #1a1f4d);
+      color: white;
+    }
 
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:40px;
-  text-align:center;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
 
-.card{
-  background:#1e293b;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
+    header h1 {
+      font-size: 18px;
+      font-weight: bold;
+    }
 
-img{
-  width:180px;
-  border-radius:20px;
-  border:3px solid #38bdf8;
-}
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ccc;
+      font-size: 14px;
+    }
 
-h1{color:#38bdf8;}
+    nav a:hover {
+      color: white;
+    }
 
-.section{
-  margin-top:30px;
-  background:#1e293b;
-  padding:20px;
-  border-radius:15px;
-  text-align:left;
-}
+    .btn {
+      padding: 10px 20px;
+      border: 1px solid #6c7cff;
+      border-radius: 20px;
+      color: white;
+      text-decoration: none;
+    }
 
-.badge{
-  display:inline-block;
-  background:#38bdf8;
-  color:black;
-  padding:5px 10px;
-  border-radius:8px;
-  margin:5px;
-  font-size:12px;
-}
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 50px;
+    }
 
-.news{
-  margin-top:10px;
-  padding:10px;
-  border-left:3px solid #38bdf8;
-}
-</style>
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid #3d4fff;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      font-size: 12px;
+      color: #8aa0ff;
+    }
+
+    .hero-text h2 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      width: 300px;
+      height: 180px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <header>
+    <h1>kholik_2388010037<span style="color:#4fc3f7">Tech</span></h1>
+    <nav>
+      <a href="#">Beranda</a>
+      <a href="#">Layanan</a>
+      <a href="#">Visi</a>
+      <a href="#">Kontak</a>
+      <a href="#" class="btn">Konsultasi</a>
+    </nav>
+  </header>
 
-<!-- PROFILE -->
-<div class="card">
-  <img src="profile.jpeg" alt="foto">
-  <h1>Kholik</h1>
-  <p>AWS Cloud Engineer | Linux Enthusiast</p>
-</div>
+  <section class="hero">
+    <div class="hero-text">
+      <div class="badge">Innovating Tomorrow, Today</div>
+      <h2>Menciptakan Inovasi Digital untuk Masa Depan yang Lebih Baik</h2>
+    </div>
 
-<!-- ABOUT -->
-<div class="section">
-  <h2>About Me</h2>
-  <p>
-    Saya adalah mahasiswa Teknik Informatika yang fokus pada cloud computing,
-    server Linux, dan deployment aplikasi menggunakan AWS EC2 serta Nginx.
-    Saya juga belajar DevOps dan automation CI/CD.
-  </p>
-</div>
-
-<!-- SKILLS -->
-<div class="section">
-  <h2>Skills</h2>
-  <span class="badge">AWS EC2</span>
-  <span class="badge">Nginx</span>
-  <span class="badge">Linux</span>
-  <span class="badge">GitHub</span>
-  <span class="badge">Docker Basic</span>
-  <span class="badge">CI/CD</span>
-</div>
-
-<!-- NEWS / PROJECT -->
-<div class="section">
-  <h2>News / Project</h2>
-
-  <div class="news">
-    🚀 Deploy pertama portfolio di AWS EC2 menggunakan Nginx
-  </div>
-
-  <div class="news">
-    🛠 Belajar setup CI/CD GitHub Actions ke Docker Hub
-  </div>
-
-  <div class="news">
-    📡 Konfigurasi server Linux untuk hosting website statis
-  </div>
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-  <h2>Contact</h2>
-  <p>Email: kholik@example.com</p>
-  <p>WhatsApp: 08xxxxxxxxxx</p>
-</div>
-
-</div>
+    <div class="card">
+      Platform Intelligence
+    </div>
+  </section>
 
 </body>
 </html>
